@@ -29,6 +29,11 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
+
+* {
+    box-sizing: border-box;
+}
+
 body {
 	line-height: 1;
 }
@@ -101,15 +106,34 @@ ol li{
 
 }
 
-body {
-    font-family: 'HelveticaNeue-Thin';
+#hero {
+    background-image: url("../img/hero-bg.png");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
 }
 
-h1 {
-    font-sze: 25px
+h2 {
+    font-size: 52px;
+    font-weight: 700;
+    text-transform: uppercase; 
 }
 
-@font-face{
-    font-family: "HelveticaNeue-Thin";
-    src: local("HelveticaNeue-Thin.otf"), url("HelveticaNeue-Thin.otf") format("opentype");
+.nav li {
+    display: inline-block; 
+}
+
+.nav li a {
+    color: white;
+    text-transform: uppercase;
+    text-decoration: none;
+    margin-left: 30px; 
+    padding-bottom: 3px; 
+    border-bottom: 4px solid white transparent; 
+    transition: border-bottom 0.1s, color 0.1s; 
+}
+
+.nav li a:hover {
+    border-bottom: 4px solid white; 
+    transition: border-bottom 0.1s, color 0.1s;
 }
